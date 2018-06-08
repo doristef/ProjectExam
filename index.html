@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Halldor Valur Stefansson, www.doristef.me">
+    <meta name="description" content="spacex, space, rocket, capsule, launch">
+    <title>Space Technology & Space Program Activites</title>
+    <link rel="icon" type="image/png" href="_img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="_css/stylesheet.css" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+  <!-- NAV -->
+          <nav>
+            <ul class="dropdown" id="navigation">
+              <li id="hamburgerNav" class="icon">
+                <a href="javascript:void(0);">
+                  <i class="fa fa-bars"></i></a>
+              </li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">SpaceX</a>
+                  <ul>
+                    <li><a href="#">Past Launches</a></li>
+                    <li><a href="#">Upcoming Launches</a></li>
+                    <li><a href="#">Rockets</a></li>
+                    <li><a href="#">Capsules</a></li>
+                    <li><a href="#">About</a></li>
+                  </ul>
+              </li>
+              <li><a href="more.html">More About Space</a></li>
+              <li><a href="fun.html">Fun Facts</a></li>
+              <li><a href="apod.html">Photo of the Day</a></li>
+            </ul>
+            <h2> Space Technology </h2>
+          </nav>
+
+<!-- WRAPPER, Row Layout -->
+    <div id="wrapper">
+
+<!-- MAIN, Column Layout -->
+        <main>
+
+          <!-- HEADER -->
+          <header id="apod">
+            <span class="apodImg"></span>
+            <span class="apodLoad"></span>
+            <span class="apodTitle"></span>
+            <div class="apodExp">
+            </div>
+            <button class="apodExpMore"></button>
+
+          </header>
+          <!--- Section 1 -->
+          <section class="first">
+            <h3> Header First </h3>
+            <div id="funFact1"></div>
+            <div id="funFact2"></div>
+          </section>
+
+          <!--- Section 2 -->
+          <section class="second">
+             <h3> Header Second </h3>
+            <div id="mapText">Where is the International Space Station?</div>
+            <div id="map"></div>
+          </section>
+
+          <!--- Section 3, Image -->
+          <section class="third">
+            <h3> Header Third </h3>
+            Third Section, Image </section>
+
+          <!--- Section 4,  -->
+          <section class="fourth">
+            <h3> Header Fourth </h3>
+            Fourth Section </section>
+
+          <!--- ASIDE, Side Bar / Desktop  -->
+          <aside class="sidebar"> Aside, Side Bar / Desktop </aside>
+
+        </main>
+
+<!-- FOOTER -->
+          <footer> Footer, 2018 </footer>
+
+<!-- END WRAPPER -->
+    </div>
+
+</body>
+<!-- JS Scripts -->
+    <script src="./_script/script.js"></script>
+    <script src="./_script/funFacts.js"></script>
+    <script src="./_script/apod.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGbs_BPoFSN9r1QVRq_uS4i2Vsu4IMxGo&callback=initMap"></script>
+</html>
