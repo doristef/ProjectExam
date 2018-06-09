@@ -17,7 +17,8 @@ body {
     line-height: 1.4;
     margin: 0 auto;
     padding: 0;
-    background: #f9f9f9;
+    /* Photo by Aron Visuals on Unsplash */
+    background: #f1f1f1;
     color: #333;
 }
 
@@ -283,6 +284,7 @@ nav {
   top: 0;
   color: #f9f9f9;
   border-bottom: 3px solid #ff7100;
+  box-shadow: 0 3px 8px 0px #333;
 }
 nav h2 { display: none; font-size: 1.2em; }
 
