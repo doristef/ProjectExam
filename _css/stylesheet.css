@@ -341,6 +341,7 @@ nav ul.dropdown li:hover ul {
   display: block;
   opacity: 1;
   visibility: visible;
+  box-shadow: 0 3px 11px 0 #333;
 }
 
 /* Items with aria-haspopup, add "arrow" */
