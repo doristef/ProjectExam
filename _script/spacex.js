@@ -33,7 +33,11 @@ window.onload = removeAddText('<h2>Fetching Data!</h2>', spacexHistory);
         for(key in res) {
           if ( res.hasOwnProperty(key) ) {
            d = new Date( res[key].event_date_utc );
-           let aDate = '<h5>' + d + '</h5>';
+           // Date to String, Slice off Time.
+           d1 = new Date(d).toUTCString();
+           d1 = d1.split(' ').slice(0, 4).join(' ');
+
+           let aDate = '<h5>' + d1 + '</h5>';
            let title = '<h2>' + res[key].title + '</h2>';
            let details = '<p>' + res[key].details + '</p>';
            let links = res[key].links;
@@ -41,7 +45,7 @@ window.onload = removeAddText('<h2>Fetching Data!</h2>', spacexHistory);
            let linkList = '<ul><li><h4> Read More: </h4></li>';
              for( key1 in links ) {
                if ( links.hasOwnProperty(key1) ) {
-                 linkList += '<li><a href="' + links[key1] + '" title="' + key1 + '">' + capitalize(key1) + '</a></li>';
+                 linkList += '<li> <a href="' + links[key1] + '" title="' + capitalize(key1) + '">' + capitalize(key1) + '</a> </li>';
                }
              }
              linkList += '</ul>';

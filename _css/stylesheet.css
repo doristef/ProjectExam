@@ -109,6 +109,7 @@ main aside.sidebar { flex: 1; order: 1; }
     width: 75%;
     background: #f9f9f9;
     background-size: cover;
+    text-align: center;
   }
 
   header span.apodImg img {
@@ -178,6 +179,7 @@ section.fourth {
   padding: 5px 15px;
 }
 #spacexHistory ul li a {
+  font-size: 1.1em;
   color: black;
   text-decoration: none;
 }
@@ -188,6 +190,8 @@ section.fourth {
   width: 80%;
 }
 #mapText {
+  margin: 0;
+  padding-left: 25px;
   font-family: 'Fjalla One', sans-serif;
   font-size: 1.6em;
   font-weight: bold;
@@ -217,8 +221,8 @@ aside {
   color: #f9f9f9;
 }
 
-/***** Fun Facts **********************
-  ***********************************/
+/***** Fun Facts *******************************************************
+  **********************************************************************/
 aside.sidebar h3 {
   font-family: 'Fjalla One', sans-serif;
   margin: 10px;
@@ -251,8 +255,8 @@ div#funFact3 p a {
 }
 
 
-/***** NAVIGATION *******************
-  ***********************************/
+/***** NAVIGATION ******************************************************
+  **********************************************************************/
 
 nav {
   z-index: 999;
@@ -287,8 +291,8 @@ nav ul li.icon { display: none; }
 nav ul li ul { display: none; }
 
 
-/***** FOOTER ***********************
-  ***********************************/
+/***** FOOTER ******************************************************
+  ******************************************************************/
 
 footer {
   background: #181C1F;
@@ -300,13 +304,13 @@ footer {
 
 
 
-/***** MEDIA ************************
-  ***********************************/
+/***** MEDIA ******************************************************
+  *****************************************************************/
 @media all and (max-width: 1200px) {
 /* Remove margin on mobile / tablet */
     main { margin: 0;}
 }
-@media all and (max-width: 800px) {
+@media all and (max-width: 850px) {
 /******* ORDER SECTIONS *******************************************/
   main header { order: 1; }
   main section.first { order: 2; }
@@ -322,11 +326,18 @@ footer {
     border: 0;
     text-align: left;
   }
-  /* HEADER + SECTION Width! */
+  /******* HEADER + SECTION Width! ***********************************/
   header, section {
     border-right: 0;
     width: 100%;
   }
+
+  /******* SECTION 4 // SPACEX HISTORY ******************************/
+  #spacexHistory ul { padding-left: 0; }
+  #spacexHistory ul li:not(:first-child) { padding-left: 35px; }
+  #spacexHistory ul li h4 { margin: 0; }
+  #spacexHistory ul li { display: block; margin: 15px; }
+  #spacexHistory p { width: 100%; }
 
 /******* HAMBURGER NAV - show icon not links *************************/
   nav ul { flex-flow: column wrap; padding: 0; text-align: left; }

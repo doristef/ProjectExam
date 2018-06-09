@@ -35,18 +35,21 @@ function showApod (result) {
         let imageExpShort = imageExp.slice(0,100) + '  ...  '
 
         // TEXT for Button
-        let apodExpMoreMore = 'Read More About This Image!';
-        let apodExpMoreLess = 'Read Less!';
+        let apodExpMoreMore = 'Click to read about this picture!';
+        let apodExpMoreLess = 'Hide the text!';
 
         // Add the card into the HTML.
+        apodExp.style.display = 'none';
+        apodTitle.style.display = 'none';
         apodTitle.innerHTML = '<h2>' + title + '</h2>';
         apodImg.innerHTML = '<a href="' + imageLink + '" alt="' + title + '"><img src="' + imageUrl + '" alt="' + title +'"></a>';
-        apodExp.innerHTML += imageExpShort;
+        apodExp.innerHTML = imageExp
         apodExpMore.innerHTML += apodExpMoreMore;
 
         /**  SHOW / HIDE DIV, On Click */
         apodExpMore.addEventListener('click', function () {
-          apodExp.innerHTML = (apodExp.innerHTML === imageExp) ? imageExpShort : imageExp;
+          showHideElementById(apodTitle)
+          showHideElementById(apodExp)
           apodExpMore.innerHTML = (apodExpMore.innerHTML === apodExpMoreMore ) ? apodExpMoreLess : apodExpMoreMore;
         }, false);
 }
