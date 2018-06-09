@@ -3,8 +3,8 @@
     Scripts by doristef.me
 -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*/
 
-// API for Articles from SpaceX
-const spacexHistory = 'https://api.spacexdata.com/v2/info/history'
+// API for Location of ISS, Astronauts/People in Space.
+const spacexHistory = 'https://api.spacexdata.com/v2/info/history?sort=title'
 let howMany = 3; // How many articles to show
 let article = []; // Store Articles
 
@@ -55,17 +55,13 @@ window.onload = removeAddText('<h2>Fetching Data!</h2>', spacexHistory);
         }
         // Sort the new array by date
         arr.sort( function (a, b) { return b.date - a.date; } );
-            for( let i = 0; i < howMany; i++ ) {
+            for( let i = 0; i < showAll; i++ ) {
                 sxHis.innerHTML += arr[i].title;
                 sxHis.innerHTML += arr[i].aDate;
                 sxHis.innerHTML += arr[i].details;
                 sxHis.innerHTML += arr[i].links;
             }
-            sxHis.innerHTML += '<a href="history.html" title="All Articles">View Older Articles</a>';
         } )
-
-
-
    // If it fails, show the error in the console.
    .catch(err => console.log(err));
  })();
