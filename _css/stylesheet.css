@@ -180,6 +180,14 @@ section > * {
   margin: 4%;
 }
 section.third { min-height: 100VH; }
+section.third h3:before {
+  content: "Discover new things";
+}
+section.third h3 {
+  color: #fff;
+  font-size: 1.4em;
+  float: right;
+}
 section.fourth h4 {
   margin: 25px 0 15px 0;
   font-weight: bold;
