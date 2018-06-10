@@ -413,6 +413,16 @@ nav ul a {
 }
 
 nav ul a:hover { background: #454545; }
+nav ul#navigation.dropdown li.active,
+nav ul#navigation.dropdown li ul li.active {
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.8em;
+  color: #ff7100;
+}
+nav ul#navigation.dropdown li a.active {
+  color: #ff7100;
+}
 /* Hide Hamburger NAV */
 nav ul li.icon { display: none; }
 
@@ -497,6 +507,7 @@ footer {
     border: 0;
     text-align: left;
     padding-top: 15px;
+    border-top: 3px solid #ff7100;
   }
 
   aside ul li { text-align: left; padding-left: 12px; }
@@ -552,5 +563,5 @@ footer {
   }
 
 
-nav h2 { display: block; position: absolute; top: 5px; right: 2%; padding: 0; margin: 0; }
+nav h2 { display: block; position: absolute; top: 15px; right: 4%; padding: 0; margin: 0; }
 } /* Close Media max: 600px */

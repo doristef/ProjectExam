@@ -9,11 +9,6 @@
     <link rel="icon" type="image/png" href="_img/favicon.png">
     <link rel="stylesheet" type="text/css" href="_css/stylesheet.css" media="all">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style type="text/css">
-      /* Change order of Sections */
-        main section.second { order: 5; }
-        main section.third { order: 4; }
-    </style>
 </head>
 <body>
 
@@ -25,17 +20,17 @@
                   <i class="fa fa-bars"></i></a>
               </li>
               <li><a href="index.html" title="Home">Home</a></li>
-              <li><a href="#" aria-haspopup="true" onclick="return false;" title="SpaceX" class="active">SpaceX</a>
+              <li><a href="#" aria-haspopup="true" onclick="return false;" title="SpaceX">SpaceX</a>
                   <ul>
                     <li><a href="history.html" title="Articles">Articles</a></li>
                     <li><a href="spacexLLaunch.html" title="Latest Launch">Latest Launch</a></li>
                     <li><a href="spacexULaunch.html" title="Upcoming Launches">Upcoming Launches</a></li>
-                    <li class="active">Rockets</li>
+                    <li><a href="spacexRock.html" title="Rockets">Rockets</a></li>
                     <li><a href="spacexCap.html" title="Capsules">Capsules</a></li>
                     <li><a href="spacex.html" title="About">About</a></li>
                   </ul>
               </li>
-              <li><a href="contact.html" title="Contact Us">Contact Us</a></li>
+              <li class="active">Contact Us</li>
               <li><a href="#showMAP" title="Show Location of ISS">ISS Location</a></li>
             </ul>
             <h2> Space Technology </h2>
@@ -47,7 +42,7 @@
 <!-- MAIN, Column Layout -->
         <main>
 
-          <!-- HEADER
+          <!-- HEADER -->
           <header id="apod">
             <span class="apodImg"></span>
             <span class="apodLoad"></span>
@@ -55,12 +50,12 @@
             <div class="apodExp">
             </div>
             <button class="apodExpMore"></button>
-
-          </header> -->
-          <!--- Section 1
+            <hr>
+          </header>
+          <!--- Section 1 -->
           <section class="first">
             <h3>  </h3>
-          </section> -->
+          </section>
 
           <!--- Section 2 -->
           <section class="second" id="showMAP">
@@ -75,8 +70,9 @@
 
           <!--- Section 4,  -->
           <section class="fourth">
-            <h1> SpaceX Rockets</h1>
-            <div id="spacexRock"></div>
+            <h1> SpaceX History</h1>
+            <hr>
+            <div id="spacexHistory"></div>
           </section>
 
           <!--- ASIDE, Side Bar / Desktop  -->
@@ -99,6 +95,7 @@
 <!-- JS Scripts -->
     <script src="./_script/script.js"></script>
     <script src="./_script/funFacts.js"></script>
-    <script src="./_script/spacexRock.js"></script>
+    <script src="./_script/apod.js"></script>
+    <script src="./_script/spacex.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGbs_BPoFSN9r1QVRq_uS4i2Vsu4IMxGo&callback=initMap"></script>
 </html>
