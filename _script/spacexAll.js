@@ -48,7 +48,7 @@ window.onload = removeAddText('<h2>Fetching Data!</h2>', spacexHistory);
                  linkList += '<li> <a href="' + links[key1] + '" title="' + capitalize(key1) + '">' + capitalize(key1) + '</a> </li>';
                }
              }
-             linkList += '</ul>';
+             linkList += '</ul><hr>';
 
            arr.push({"id": key, "date":(d), "aDate" : aDate, "title" : title, "details" : details, "links" : linkList });
          }
