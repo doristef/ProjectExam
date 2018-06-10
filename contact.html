@@ -42,7 +42,7 @@
 <!-- MAIN, Column Layout -->
         <main>
 
-          <!-- HEADER -->
+          <!-- HEADER
           <header id="apod">
             <span class="apodImg"></span>
             <span class="apodLoad"></span>
@@ -51,7 +51,7 @@
             </div>
             <button class="apodExpMore"></button>
             <hr>
-          </header>
+          </header> -->
           <!--- Section 1 -->
           <section class="first">
             <h3>  </h3>
@@ -70,9 +70,41 @@
 
           <!--- Section 4,  -->
           <section class="fourth">
-            <h1> SpaceX History</h1>
-            <hr>
-            <div id="spacexHistory"></div>
+            <h3>Want to ask us anything?</h3>
+           <p>
+              Just fill out the form and ask us a question.
+           </p>
+           <form method="post" action="#" id="regCust">
+             <fieldset>
+                 <legend>Your Details:</legend>
+               <input type="text" name="firstName" placeholder="First Name" required tabindex="1" autofocus >
+               <span class="error" id="firstName"></span>
+             </fieldset>
+             <fieldset>
+               <input type="text" name="lastName" placeholder="Last Name" required tabindex="2">
+               <span class="error" id="lastName"></span>
+             </fieldset>
+             <fieldset>
+               <input type="email" name="email" placeholder="Email" required tabindex="3">
+               <span class="error" id="email"></span>
+            </fieldset>
+            <fieldset>
+               <input type="tel" name="telephone" placeholder="Telephone" required tabindex="4">
+               <span class="error" id="email"></span>
+             </fieldset>
+
+             <fieldset class="cb">
+                 <legend>What do you want to ask?</legend>
+                 <textarea placeholder="Type your Message Here...." required tabindex="5"> </textarea>
+                 <span class="error" id="check"></span>
+             </fieldset>
+             <fieldset>
+                   <div class="submit">
+                     <button type="submit" class="btn" id="btn" tabindex="6">Click Here to Send!</button>
+                     <span id="success"></span>
+                   </div>
+              </fieldset>
+            </form>
           </section>
 
           <!--- ASIDE, Side Bar / Desktop  -->
@@ -95,7 +127,6 @@
 <!-- JS Scripts -->
     <script src="./_script/script.js"></script>
     <script src="./_script/funFacts.js"></script>
-    <script src="./_script/apod.js"></script>
-    <script src="./_script/spacex.js"></script>
+    <script src="./_script/form.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGbs_BPoFSN9r1QVRq_uS4i2Vsu4IMxGo&callback=initMap"></script>
 </html>
