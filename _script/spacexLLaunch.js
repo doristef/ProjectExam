@@ -8,7 +8,7 @@ const spacexLLaunch = 'https://api.spacexdata.com/v2/launches/latest'
 
 // Elements used for SpaceX Info.
 let sxLLaunch = document.getElementById('spacexLLaunch');
-let card = '';
+let card = '', d; // Variables for Cards and dates.
 
 /* ADD Load Message on Fun Fact / Map */
 window.onload = removeAddText('<h2>Fetching Data!</h2>', sxLLaunch);
@@ -24,9 +24,10 @@ let displayHistory = ( function displayHistory () {
                       card += '<div class="card">';
                       card += '<img src="' + res.links.mission_patch_small + '" alt="' + res.mission_name +'">';
                       card += '<div class="cardContainer">';
-                      card += '<h2>' + res.mission_name + ' - ' + res.flight_number + '</h2>';
+                      card += '<h2>' + res.mission_name + ' - fn:' + res.flight_number + '</h2>';
                       card += '<span><b>Rocket:</b> ' + res.rocket.rocket_name + ', <b>Rocket Type:</b> ' + res.rocket.rocket_type + ' </span>';
-                      card += '<span><b>Launch Date:</b> ' + res.launch_date_local + ', <b> Launch Success:</b> ' + success + '</span>';
+                      d = new Date(res.launch_date_local);
+                      card += '<span><b>Launch Date:</b> ' + d.toLocaleString() + ', <b> Launch Success:</b> ' + success + '</span>';
                       card += '<span><b>Launch Site:</b> ' + res.launch_site.site_name_long + '.</span>';
                       card += '<span><b>Telemetry:</b> <a href="' + res.telemetry.flight_club + '" title="Telemetry">Click Here!</a></span>';
                       card += '<span><b>Details:</b> <p> ' + res.details + '</p></span>';

@@ -45,7 +45,7 @@ let changeBg = ( function() {
     var randomNumber = Math.floor(Math.random() * images.length);
     var bgImg = 'url(' + images[randomNumber] + ')';
 
-    var css = 'main section.third { background: #fff ' + bgImg + ' no-repeat center center; background-attachment: fixed; background-size: cover; }';
+    var css = 'main section.third { background: #fff ' + bgImg + ' no-repeat center center fixed; background-size: cover; }';
     var head = document.head;
     var style = document.getElementsByTagName('style')[0];
 

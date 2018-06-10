@@ -270,8 +270,7 @@ div.card{
     border-radius: 10px;
     border: 1px solid rgba(0,0,0, 0.4);
     max-width: 80%;
-    margin: 20px auto;
-
+    margin: 20px auto 60px auto;
 }
 
 div.card img {
@@ -465,6 +464,11 @@ footer {
 @media all and (max-width: 1200px) {
 /* Remove margin on mobile / tablet */
     main { margin: 0;}
+    div.card{ max-width: 100%; }
+    div.card img { float: none; margin: 20px auto; }
+    div.cardContainer{ padding-left: 10px; }
+    div.cardContainer span{ padding-left: 15px; }
+    div.cardContainer span p { width: 90%; }
 }
 @media all and (max-width: 850px) {
 /******* ORDER SECTIONS *******************************************/
@@ -498,12 +502,8 @@ footer {
   #spacexHistory ul li h4 { margin: 0; }
   #spacexHistory ul li { display: block; margin: 15px; }
   #spacexHistory p { width: 100%; }
-  div.card{ max-width: 100%; }
-  div.card img { float: none; margin: 20px auto; }
-  div.cardContainer{ padding-left: 10px; }
-  div.cardContainer span{ padding-left: 15px; }
+
   div.cardContainer span b { display: block; }
-  div.cardContainer span p { width: 90%; }
 
 /******* HAMBURGER NAV - show icon not links *************************/
   nav ul { flex-flow: column wrap; padding: 0; text-align: left; }

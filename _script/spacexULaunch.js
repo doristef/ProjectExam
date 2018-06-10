@@ -8,12 +8,12 @@ const spacexLLaunch = 'https://api.spacexdata.com/v2/launches/upcoming'
 
 // Elements used for SpaceX Info.
 let sxULaunch = document.getElementById('spacexULaunch');
-let card = '';
+let card = '', d; // Variables for Cards and dates.
 
 /* ADD Load Message on Fun Fact / Map */
 window.onload = removeAddText('<h2>Fetching Data!</h2>', sxULaunch);
 
-
+var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 let displayHistory = ( function displayHistory () {
 
   fetch(spacexLLaunch)
@@ -28,7 +28,8 @@ let displayHistory = ( function displayHistory () {
                       card += '<div class="cardContainer">';
                       card += '<h2>' + res[key].mission_name + ' - ' + res[key].flight_number + '</h2>';
                       card += '<span><b>Rocket:</b> ' + res[key].rocket.rocket_name + ', <b>Rocket Type:</b> ' + res[key].rocket.rocket_type + ' </span>';
-                      card += '<span><b>Launch Date:</b> ' + res[key].launch_date_local + '</span>';
+                      d = new Date(res[key].launch_date_local);
+                      card += '<span><b>Launch Date:</b> ' + d.toLocaleString() + '</span>';
                       card += '<span><b>Launch Site:</b> ' + res[key].launch_site.site_name_long + '.</span>';
                          card += '<span><b>Links:</b><ul>';
                          for( key1 in res[key].links ) {

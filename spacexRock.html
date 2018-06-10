@@ -9,6 +9,11 @@
     <link rel="icon" type="image/png" href="_img/favicon.png">
     <link rel="stylesheet" type="text/css" href="_css/stylesheet.css" media="all">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+      /* Change order of Sections */
+        main section.second { order: 5; }
+        main section.third { order: 4; }
+    </style>
 </head>
 <body>
 
@@ -24,9 +29,9 @@
                   <ul>
                     <li><a href="spacexLLaunch.html">Latest Launch</a></li>
                     <li><a href="spacexULaunch.html">Upcoming Launches</a></li>
-                    <li><a href="spacexRock.html">Rockets</a></li>
+                    <li><a href="#">Rockets</a></li>
                     <li><a href="spacexCap.html">Capsules</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="spacex.html">About</a></li>
                   </ul>
               </li>
               <li><a href="more.html">More About Space</a></li>
@@ -62,16 +67,15 @@
             <div id="map"></div>
           </section>
 
-          <!--- Section 3, Image  -->
+          <!--- Section 3, Image -->
           <section class="third">
             <h3> </h3>
           </section>
 
           <!--- Section 4,  -->
           <section class="fourth">
-            <h1> About SpaceX</h1>
-            <div id="spacexAbout">
-            </div>
+            <h1> SpaceX Rockets</h1>
+            <div id="spacexRock"></div>
           </section>
 
           <!--- ASIDE, Side Bar / Desktop  -->
@@ -94,6 +98,6 @@
 <!-- JS Scripts -->
     <script src="./_script/script.js"></script>
     <script src="./_script/funFacts.js"></script>
-    <script src="./_script/spacexAbout.js"></script>
+    <script src="./_script/spacexRock.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGbs_BPoFSN9r1QVRq_uS4i2Vsu4IMxGo&callback=initMap"></script>
 </html>
