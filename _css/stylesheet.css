@@ -237,6 +237,8 @@ section.fourth {
   border-bottom: 3px solid #ff7100;
   border-right: 2px solid rgba(255,113,0,0.4);
 }
+
+
 /***** ASIDE ************************************************************
   ***********************************************************************/
 
@@ -284,7 +286,17 @@ div#funFact3 p a {
   text-decoration: underline;
   font-weight: bold;
 }
+section.fourth h4 {
+  margin: 25px 0 15px 0;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #ff7100;
+  font-family: 'Fjalla One', sans-serif;
 
+}
+section.fourth p {
+  padding: 0 15px;
+}
 
 /***** NAVIGATION ******************************************************
   **********************************************************************/

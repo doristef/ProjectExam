@@ -42,9 +42,21 @@ window.onload = removeAddText('<h2>Fetching Data!</h2>', spacexAbout);
             let hqState = res.headquarters.state;
             let summary = res.summary;
 
-            sxAbout.innerHTML += ' BLABALBLA ' + name + ' Founder! ' + founder + ' at ' + hqAddr;
-
-
+            sxAbout.innerHTML += '<strong>' + name + '</strong> was founded in <strong>' + founded + '</strong> by the incredible <strong>' + founder + '</strong>.<br>';
+            sxAbout.innerHTML += '<strong>' + name + '</strong> has now <strong>' + employees + '</strong> employees, <strong>' + vehicles + '</strong> Vehicles, <strong>' + launch_sites + '</strong> Launch sites and <strong>' + test_sites + '</strong> Test site.';
+            sxAbout.innerHTML += '<h4> Management </h4>';
+            sxAbout.innerHTML += '<p>The <strong>CEO</strong> is ' + ceo + ',<br> The  <strong>CTO</strong> is ' + cto + ',<br> The <strong>COO</strong> is ' + coo + ' and<br> the <strong>CTO of Propulsion</stron> is ' + cto_propulsion + '.</p>';
+            sxAbout.innerHTML += '<h4> Location </h4>';
+            sxAbout.innerHTML += '<p><strong>' + name + '</strong> is located at ' + hqAddr + ', ' + hqCity + ', ' + hqState + ', United States of America. </p>';
+            sxAbout.innerHTML += '<h4> Summary </h4>';
+            sxAbout.innerHTML += '<p>' + summary + '</p>';
+            sxAbout.innerHTML += '<p><strong>' + name + '</strong> is valued at &dollar;' + valuation + '.</p>';
+          /*  <div id="card">
+              <div class="container">
+                <h4><b>Jane Doe</b></h4>
+                <p>Interior Designer</p>
+              </div>
+            </div> */
       })
    // If it fails, show the error in the console.
    .catch(err => console.log(err));
