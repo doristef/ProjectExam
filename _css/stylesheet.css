@@ -118,8 +118,8 @@ footer { flex: 1 100%; }
 main { display: flex; flex-flow: column wrap; margin: 0 6%;}
 main header { flex: 3; order: 2;}
 main section.first { flex: 3; order: 6; }
-main section.second { flex: 3; order: 4; }
-main section.third { flex: 3; order: 5; }
+main section.second { flex: 3; order: 5; }
+main section.third { flex: 3; order: 4; }
 main section.fourth { flex: 3; order: 3; }
 main aside.sidebar { flex: 1; order: 1; }
 
@@ -179,7 +179,7 @@ header, section {
 section > * {
   margin: 4%;
 }
-
+section.third { min-height: 100VH; }
 section.fourth h4 {
   margin: 25px 0 15px 0;
   font-weight: bold;
@@ -242,6 +242,16 @@ section.fourth hr {
 }
 
 #spacexHistory hr {  margin-bottom: 55px; }
+
+#spaceLinks ul li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.3em;
+}
+#spaceLinks ul li a:hover {
+  color: #ff7100;
+  text-decoration: underline;
+}
 
 #mapText {
   margin: 0;

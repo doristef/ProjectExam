@@ -23,7 +23,42 @@ function showHide() {
 let clickElement = document.getElementById("hamburgerNav");
 clickElement.addEventListener("click", showHide, false);
 
+/**  Random Background Image
+ *
+ * @type {string} width , Width of User Screen
+ * @type {string} res, Find relevant image size for screen
+ * @type {object} image, Array of Images to be used.
+ * Images from Unsplash.com
+ *
+ */
+let changeBg = ( function() {
+  var width = window.screen.availWidth;
+  var res = '';
+  if( width < '1025' ){ res = '_1024'; }
+  var images = ['_img/jeremy-thomas-99326-unsplash' + res + '.jpg',
+                '_img/nasa-43979-unsplash' + res + '.jpg',
+                '_img/nasa-45074-unsplash' + res + '.jpg',
+                '_img/nasa-63032-unsplash' + res + '.jpg',
+                '_img/bryan-goff-395922-unsplash' + res + '.jpg',
+                '_img/richard-gatley-533872-unsplash' + res + '.jpg'];
 
+    var randomNumber = Math.floor(Math.random() * images.length);
+    var bgImg = 'url(' + images[randomNumber] + ')';
+
+    var css = 'main section.third { background: #fff ' + bgImg + ' no-repeat center center; background-attachment: fixed; background-size: cover; }';
+    var head = document.head;
+    var style = document.getElementsByTagName('style')[0];
+
+    if( !style ){
+      style = document.createElement('style')
+      style.type = 'text/css';
+      style.appendChild(document.createTextNode(css));
+      head.appendChild(style);
+    }else{
+      style = document.getElementsByTagName('style')[0];
+      style.appendChild(document.createTextNode(css));
+    }
+})();
 /*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
   Functions
 -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*/
