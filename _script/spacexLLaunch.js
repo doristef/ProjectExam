@@ -19,7 +19,9 @@ let displayHistory = ( function displayHistory () {
   fetch(spacexLLaunch)
     .then(result => result.json()) // Transform into json.
     .then((res) => {
+      // Remove load message
       removeAddText('', sxLLaunch);
+
                       let success = (res.launch_success === true ) ? 'Yes' : 'No';
                       card += '<div class="card">';
                       card += '<img src="' + res.links.mission_patch_small + '" alt="' + res.mission_name +'">';

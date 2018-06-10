@@ -31,10 +31,11 @@ window.onload = removeAddText('<h2>Getting Ready The ISS Map!</h2>', funMap);
  *
  */
 function initMap() {
-  window.onload = removeAddText('', funMap);
   fetch(opennISSnow)
     .then(result => result.json()) // Transform into json.
     .then((res) => {
+      // Remove load message
+      removeAddText('', funMap);
         // If its good, give the results to displayCards.
         let lat = res.iss_position.latitude;
         let lng = res.iss_position.longitude;
@@ -82,11 +83,12 @@ function initMap() {
  *
  */
 let inSpace = ( function inSpace() {
-  window.onload = removeAddText('', funFact);
 
   fetch(opennAstros)
     .then(result => result.json()) // Transform into json.
     .then((res) => {
+      // Remove load message
+      removeAddText('', funFact);
       // if it works
       let number = res.number;
       let people = res.people;

@@ -22,11 +22,12 @@ window.onload = removeAddText('<h2>Fetching Data!</h2>', sxHis);
   *
   */
  let displayHistory = ( function displayHistory () {
-   window.onload = removeAddText('', sxHis);
 
    fetch(spacexHistory)
      .then(result => result.json()) // Transform into json.
      .then((res) => {
+       // Remove load message
+       removeAddText('', sxHis);
        // Create a new array to sort.
         let arr = [];
         let showAll = res.length;

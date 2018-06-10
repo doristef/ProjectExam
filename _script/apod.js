@@ -61,7 +61,7 @@ function showApod (result) {
 fetch(apodAPI)
   .then(result => result.json()) // Transform into json.
   .then((res) => {
-    // Works, Give res to showApod Function, Delte Load Message.
+    // Works, Give res to showApod Function, Delete Load Message.
     removeAddText('', apodLoad);
     showApod(res);
 

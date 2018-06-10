@@ -21,12 +21,13 @@ window.onload = removeAddText('<h2>Fetching Data!</h2>', sxRock);
   *
   */
  let displayCapsules = ( function displayCapsules () {
-   removeAddText('', sxRock);
 
    fetch(spacexCaps)
      .then(result => result.json()) // Transform into json.
      .then((res) => {
-
+       
+       // Remove load message
+       removeAddText('', sxRock);
         for(key in res) {
           if ( res.hasOwnProperty(key) ) {
            active = ( res[key].active === true ) ? 'Active' : 'Inactive';

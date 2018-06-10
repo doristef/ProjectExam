@@ -20,11 +20,12 @@ window.onload = removeAddText('<h2>Fetching Data!</h2>', sxCap);
   *
   */
  let displayCapsules = ( function displayCapsules () {
-   removeAddText('', sxCap);
 
    fetch(spacexCaps)
      .then(result => result.json()) // Transform into json.
      .then((res) => {
+       // Remove load message
+       removeAddText('', sxCap);
 
         for(key in res) {
           if ( res.hasOwnProperty(key) ) {

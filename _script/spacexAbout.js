@@ -10,7 +10,7 @@ const spacexAbout = 'https://api.spacexdata.com/v2/info'
 let sxAbout = document.getElementById('spacexAbout');
 
 /* ADD Load Message on Fun Fact / Map */
-window.onload = removeAddText('<h2>Fetching Data!</h2>', spacexAbout);
+window.onload = removeAddText('<h2>Fetching Data!</h2>', sxAbout);
 
 
  /**  SpaceX, About
@@ -19,11 +19,14 @@ window.onload = removeAddText('<h2>Fetching Data!</h2>', spacexAbout);
   *
   */
  let displayAbout = ( function displayAbout () {
-   window.onload = removeAddText('', spacexAbout);
 
    fetch(spacexAbout)
      .then(result => result.json()) // Transform into json.
      .then((res) => {
+
+       // Remove load message
+       removeAddText('', sxAbout);
+
             // Variables for data
             let name = res.name;
             let founder = res.founder;
