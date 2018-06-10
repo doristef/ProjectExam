@@ -50,7 +50,7 @@ window.onload = removeAddText('<h2>Fetching Data!</h2>', spacexAbout);
             sxAbout.innerHTML += '<p><strong>' + name + '</strong> is located at ' + hqAddr + ', ' + hqCity + ', ' + hqState + ', United States of America. </p>';
             sxAbout.innerHTML += '<h4> Summary </h4>';
             sxAbout.innerHTML += '<p>' + summary + '</p>';
-            sxAbout.innerHTML += '<p><strong>' + name + '</strong> is valued at &dollar;' + valuation + '.</p>';
+            sxAbout.innerHTML += '<p><strong>' + name + '</strong> is valued at ' + formatMoney(valuation, 'USD') + '</p>';
           /*  <div id="card">
               <div class="container">
                 <h4><b>Jane Doe</b></h4>

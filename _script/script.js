@@ -28,7 +28,7 @@ clickElement.addEventListener("click", showHide, false);
   Functions
 -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*/
 
-/**  UpperCase First Letter 
+/**  UpperCase First Letter
  *
  * @param {string} string , String to toUpperCase first letter.
  *
@@ -63,4 +63,14 @@ function capitalize(string) {
   */
  function rmvDec(num, dec) {
    return Number(Math.round(num+'e'+dec)+'e-'+dec);
+ }
+
+ /**  Format Number to Currency
+  *
+  * @param {string} number , Number to change
+  * @param {string} currency , Type of Currenct, USD, EUR....
+  *
+  */
+ function formatMoney(number, currency) {
+   return number.toLocaleString('en-US', { style: 'currency', currency: currency });
  }
