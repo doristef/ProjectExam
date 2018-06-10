@@ -9,6 +9,11 @@
     <link rel="icon" type="image/png" href="_img/favicon.png">
     <link rel="stylesheet" type="text/css" href="_css/stylesheet.css" media="all">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+      /* Change order of Sections */
+        main section.second { order: 5; }
+        main section.third { order: 4; }
+    </style>
 </head>
 <body>
 
@@ -25,7 +30,7 @@
                     <li><a href="spacexLLaunch.html">Latest Launch</a></li>
                     <li><a href="spacexULaunch.html">Upcoming Launches</a></li>
                     <li><a href="#">Rockets</a></li>
-                    <li><a href="spacexCap.html">Capsules</a></li>
+                    <li><a href="#">Capsules</a></li>
                     <li><a href="spacex.html">About</a></li>
                   </ul>
               </li>
@@ -41,7 +46,7 @@
 <!-- MAIN, Column Layout -->
         <main>
 
-          <!-- HEADER -->
+          <!-- HEADER
           <header id="apod">
             <span class="apodImg"></span>
             <span class="apodLoad"></span>
@@ -49,12 +54,12 @@
             <div class="apodExp">
             </div>
             <button class="apodExpMore"></button>
-            <hr>
-          </header>
-          <!--- Section 1 -->
+
+          </header> -->
+          <!--- Section 1
           <section class="first">
             <h3>  </h3>
-          </section>
+          </section> -->
 
           <!--- Section 2 -->
           <section class="second" id="showMAP">
@@ -69,9 +74,8 @@
 
           <!--- Section 4,  -->
           <section class="fourth">
-            <h1> SpaceX History</h1>
-            <hr>
-            <div id="spacexHistory"></div>
+            <h1> SpaceX Capsules</h1>
+            <div id="spacexCaps"></div>
           </section>
 
           <!--- ASIDE, Side Bar / Desktop  -->
@@ -94,7 +98,6 @@
 <!-- JS Scripts -->
     <script src="./_script/script.js"></script>
     <script src="./_script/funFacts.js"></script>
-    <script src="./_script/apod.js"></script>
-    <script src="./_script/spacex.js"></script>
+    <script src="./_script/spacexCaps.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGbs_BPoFSN9r1QVRq_uS4i2Vsu4IMxGo&callback=initMap"></script>
 </html>

@@ -31,8 +31,9 @@ function showApod (result) {
         let title = result.title;
         let imageUrl = result.url;
         let imageExp = result.explanation;
-        // Shorten the explanation
-        let imageExpShort = imageExp.slice(0,100) + '  ...  '
+        let copyright = result.copyright;
+        /* Shorten the explanation
+        let imageExpShort = imageExp.slice(0,100) + '  ...  ' */
 
         // TEXT for Button
         let apodExpMoreMore = 'Click to read about this picture!';
@@ -43,7 +44,8 @@ function showApod (result) {
         apodTitle.style.display = 'none';
         apodTitle.innerHTML = '<h2>' + title + '</h2>';
         apodImg.innerHTML = '<a href="' + imageLink + '" alt="' + title + '"><img src="' + imageUrl + '" alt="' + title +'"></a>';
-        apodExp.innerHTML = imageExp
+        apodExp.innerHTML = imageExp;
+        if ( copyright ){ apodExp.innerHTML = + '<br><span> Copyright: ' + copyright + '.</span>'; }
         apodExpMore.innerHTML += apodExpMoreMore;
 
         /**  SHOW / HIDE DIV, On Click */

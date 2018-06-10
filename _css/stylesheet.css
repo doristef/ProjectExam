@@ -1,5 +1,5 @@
 /* Import Open Sans from Google Fonts */
-@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans|Open+Sans+Condensed:300');
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans|Open+Sans+Condensed:700');
 /*
     font-family: 'Fjalla One', sans-serif;
     font-family: 'Open Sans', sans-serif;
@@ -78,7 +78,8 @@ hr {
 }
 
 a {
-  color: #f9f9f9;
+  color: #333;
+  text-decoration: none;
 }
 
 a:active {
@@ -87,6 +88,7 @@ a:active {
 
 a:hover {
   color: #ff7100;
+  text-decoration: underline;
 }
 
 /***** WRAPPER & ORDER **************************************************
@@ -261,6 +263,42 @@ section.fourth hr {
   text-decoration: underline;
 }
 
+div.card{
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0, 0.4);
+    max-width: 80%;
+    margin: 20px auto;
+
+}
+
+div.card img {
+    float: right;
+    padding: 5px 0 0 5px;
+}
+
+div.cardContainer{
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+div.cardContainer span{
+    display: block;
+    font-size: 1.2em;
+    margin: 20px 0;
+    padding-left: 25px;
+}
+div.cardContainer span b {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.4em;
+    font-weight: 700;
+}
+div.cardContainer span p {
+    width: 80%;
+}
+
 #mapText {
   margin: 0;
   margin-top: 35px;
@@ -432,10 +470,10 @@ footer {
 /******* ORDER SECTIONS *******************************************/
   main header { order: 1; }
   main section.first { order: 2; }
-  main section.second { order: 3; }
-  main section.third { order: 5; }
-  main section.fourth { order: 6; }
-  main aside.sidebar { order: 4; }
+  main section.second { order: 6; }
+  main section.third { order: 4; }
+  main section.fourth { order: 3; }
+  main aside.sidebar { order: 5; }
 
   aside {
     min-height: 500px;
@@ -460,6 +498,12 @@ footer {
   #spacexHistory ul li h4 { margin: 0; }
   #spacexHistory ul li { display: block; margin: 15px; }
   #spacexHistory p { width: 100%; }
+  div.card{ max-width: 100%; }
+  div.card img { float: none; margin: 20px auto; }
+  div.cardContainer{ padding-left: 10px; }
+  div.cardContainer span{ padding-left: 15px; }
+  div.cardContainer span b { display: block; }
+  div.cardContainer span p { width: 90%; }
 
 /******* HAMBURGER NAV - show icon not links *************************/
   nav ul { flex-flow: column wrap; padding: 0; text-align: left; }
@@ -476,19 +520,26 @@ footer {
   width: 100%;
   border-bottom: 3px solid #ff7100;
   }
-/* Show all links on click */
-nav ul.dropdown.responsive li, nav ul.dropdown.responsive li ul li  {
-  display: block;
-  background: #333;
+  /* Show all links on click */
+  nav ul.dropdown.responsive li,
+  nav ul.dropdown.responsive li ul li  {
+    display: block;
+    background: #333;
+    color: white;
+  }
+  nav ul.dropdown.responsive li ul li  { padding: 0 0 0 15px; }
+  nav ul.dropdown.responsive li ul {
+    top: 0;
+    right: 0;
+    position: relative;
+    border: 0px;
+    width: 100%;
+    display: block;
+    opacity: 100;
+    visibility: visible;
+    color: #fff;
   }
 
-nav ul.dropdown.responsive li ul {
-  display: block;
-  position: relative;
-  top: 0;
-  left: 25px;
-  width: 100%;
-  color: white;
-  }
+
 nav h2 { display: block; position: absolute; top: 5px; right: 2%; padding: 0; margin: 0; }
 } /* Close Media max: 600px */

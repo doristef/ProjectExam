@@ -12,7 +12,7 @@ let article = []; // Store Articles
 let sxHis = document.getElementById('spacexHistory');
 
 /* ADD Load Message on Fun Fact / Map */
-window.onload = removeAddText('<h2>Fetching Data!</h2>', spacexHistory);
+window.onload = removeAddText('<h2>Fetching Data!</h2>', sxHis);
 
 
  /**  SpaceX History from SpaceX API
@@ -22,7 +22,7 @@ window.onload = removeAddText('<h2>Fetching Data!</h2>', spacexHistory);
   *
   */
  let displayHistory = ( function displayHistory () {
-   window.onload = removeAddText('', spacexHistory);
+   window.onload = removeAddText('', sxHis);
 
    fetch(spacexHistory)
      .then(result => result.json()) // Transform into json.

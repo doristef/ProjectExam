@@ -109,3 +109,16 @@ function capitalize(string) {
  function formatMoney(number, currency) {
    return number.toLocaleString('en-US', { style: 'currency', currency: currency });
  }
+
+ /**  REPLACE WORD
+  * Replaces word/s in string.
+  * @param {string} word , Word to change.
+  * @param {string} newWord , Word to change to.
+  * @param {string} where , Where to change.
+  *
+  */
+ function replaceWords(word, newWord, where) {
+   word = new RegExp(word, 'gi');
+   var replacedText = where.replace(word, newWord);
+   return replacedText;
+ }
