@@ -12,14 +12,14 @@ html, body {
 }
 
 body:before {
-          content: "";
-          position: fixed;
-          top: -10px;
-          left: 0;
-          width: 100%;
-          height: 10px;
-          box-shadow: 0px 0px 12px rgba(255,255,255, 0.8);
-          z-index: 9999;
+    content: "";
+    position: fixed;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    box-shadow: 0px 0px 12px rgba(255,255,255, 0.8);
+    z-index: 9999;
 }
 
 body {
@@ -29,14 +29,16 @@ body {
     line-height: 1.4;
     margin: 0 auto;
     padding: 0;
-    /* Photo by Aron Visuals on Unsplash */
     background: #f1f1f1;
     color: #333;
 }
 
+h1, h2, h3, h4, h5 {
+  font-family: 'Fjalla One', sans-serif;
+}
+
 h1 {
   padding-right: 20px;
-  font-family: 'Fjalla One', sans-serif;
   font-size: 3em;
 }
 
@@ -67,9 +69,6 @@ h5 {
     font-style: italic;
     line-height: 0.9em;
 }
-p {
-
-}
 
 a {
   color: #f9f9f9;
@@ -82,8 +81,10 @@ a:active {
 a:hover {
   color: #ff7100;
 }
+
 /***** WRAPPER & ORDER **************************************************
   ***********************************************************************/
+
 div#wrapper {
     margin: 0 auto;
     margin-top: 50px;
@@ -118,6 +119,7 @@ main aside.sidebar { flex: 1; order: 1; }
 
 /***** HEADER **********************************************************
   **********************************************************************/
+
   header {
     width: 75%;
     background-size: cover;
@@ -159,8 +161,10 @@ main aside.sidebar { flex: 1; order: 1; }
     box-shadow: 0 8px 6px -6px rgba(225, 113, 0, 0.4);
     cursor: pointer;
   }
+
 /***** SECTION *********************************************************
   **********************************************************************/
+
 header, section {
   border-right: 3px solid rgba(0,0,0, 0.1);
   width: 75%;
@@ -169,19 +173,16 @@ header, section {
 section > * {
   margin: 4%;
 }
-section.first {
+
+section.fourth h4 {
+  margin: 25px 0 15px 0;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #ff7100;
 }
 
-section.second {
-
-}
-
-section.third {
-
-}
-
-section.fourth {
-
+section.fourth p {
+  padding: 0 15px;
 }
 
 #spacexHistory a {
@@ -189,33 +190,42 @@ section.fourth {
   font-size: 1.1em;
   text-decoration: none;
 }
+
 #spacexHistory a:hover {
   color: #ff7100;
   font-size: 1.1em;
   text-decoration: underline;
 }
+
 #spacexHistory ul {
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid #ff7100;
   width: 80%;
   box-shadow: 0 4px 3px -3px rgba(225, 113, 0, 0.6);
+  margin-bottom: 55px;
 }
 
 #spacexHistory ul li {
   display: inline-block;
   padding: 5px 15px;
 }
+
 #spacexHistory ul li a {
+  font-family: 'Fjalla One', sans-serif;
   font-size: 1.1em;
-  color: black;
+  color: #333;
   text-decoration: none;
 }
+
 #spacexHistory ul li a:hover {
-  color: orange;
+  color: #ff7100;
   text-decoration: underline;
 }
+
 #spacexHistory p {
   width: 80%;
+  padding: 10px 5px;
 }
+
 #mapText {
   margin: 0;
   margin-top: 35px;
@@ -227,6 +237,7 @@ section.fourth {
   padding-top: 25px;
   height: 50px;
 }
+
 #map {
   position: relative;
   height: 450px;
@@ -256,23 +267,26 @@ aside {
 
 /***** Fun Facts *******************************************************
   **********************************************************************/
+
 aside.sidebar h3 {
-  font-family: 'Fjalla One', sans-serif;
   margin: 10px;
   font-size: 1.4em;
 }
+
 div#funFact1, div#funFact2, div#funFact3 {
   padding: 10px;
 }
+
 div#funFact1 h5, div#funFact2 h5, div#funFact3 h5 {
-  font-family: 'Fjalla One', sans-serif;
   margin: 10px;
   font-size: 1em;
 }
+
 div#funFact1 p, div#funFact2 p, div#funFact3 p {
   padding: 10px;
   font-size: 0.8em;
 }
+
 div#funFact2 ul {
   list-style: none;
   text-align: center;
@@ -285,17 +299,6 @@ div#funFact3 p a {
   font-size: 1em;
   text-decoration: underline;
   font-weight: bold;
-}
-section.fourth h4 {
-  margin: 25px 0 15px 0;
-  font-weight: bold;
-  font-size: 1.5em;
-  color: #ff7100;
-  font-family: 'Fjalla One', sans-serif;
-
-}
-section.fourth p {
-  padding: 0 15px;
 }
 
 /***** NAVIGATION ******************************************************
