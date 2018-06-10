@@ -464,11 +464,14 @@ footer {
 @media all and (max-width: 1200px) {
 /* Remove margin on mobile / tablet */
     main { margin: 0;}
+
     div.card{ max-width: 100%; }
     div.card img { float: none; margin: 20px auto; }
     div.cardContainer{ padding-left: 10px; }
     div.cardContainer span{ padding-left: 15px; }
     div.cardContainer span p { width: 90%; }
+
+    main section.third {  background-attachment: inherit; }
 }
 @media all and (max-width: 850px) {
 /******* ORDER SECTIONS *******************************************/
