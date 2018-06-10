@@ -344,6 +344,14 @@ aside.sidebar h3 {
   margin: 10px;
   font-size: 1.4em;
 }
+aside.sidebar a {
+  color: #fff;
+  text-decoration: none;
+}
+aside.sidebar a:hover {
+  color: #ff7100;
+  text-decoration: underline;
+}
 
 div#funFact1, div#funFact2, div#funFact3 {
   padding: 10px;
@@ -471,7 +479,7 @@ footer {
     div.cardContainer span{ padding-left: 15px; }
     div.cardContainer span p { width: 90%; }
 
-    main section.third {  background-attachment: inherit; }
+    main section.third {  background-attachment: inherit !important; }
 }
 @media all and (max-width: 850px) {
 /******* ORDER SECTIONS *******************************************/
