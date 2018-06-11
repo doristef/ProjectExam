@@ -43,11 +43,11 @@ let changeBg = ( function() {
                 '_img/richard-gatley-533872-unsplash' + res + '.jpg'];
 
     var randomNumber = Math.floor(Math.random() * images.length);
-    var bgImg = 'url(' + images[randomNumber] + ')';
+    var randomNumber2 = (randomNumber === images.length) ? randomNumber-1 : randomNumber+1;
 
-    var css = 'main section.third { background: #fff ' + bgImg + ' no-repeat center center fixed; background-size: cover; }';
-    css += 'main aside.sidebar div#sideImage { background: #fff ' + bgImg + ' no-repeat center center; background-size: cover; }';
-    document.getElementById('sideImage').innerHTML += '<a href="' + images[randomNumber] + '" title="Image from Unsplash.com">Click for BIG image!</a>';
+    var css = 'main section.third { background: #fff url("' + images[randomNumber] + '") no-repeat center center fixed; background-size: cover; }';
+    css += 'main aside.sidebar div#sideImage { background: #fff url("' + images[randomNumber2] + '") no-repeat center center; background-size: cover; }';
+    document.getElementById('sideImage').innerHTML += '<a href="' + images[randomNumber2] + '" title="Image from Unsplash.com">Click for BIG image!</a>';
     var head = document.head;
     var style = document.getElementsByTagName('style')[0];
 
