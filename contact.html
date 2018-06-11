@@ -74,36 +74,39 @@
            <p>
               Just fill out the form and ask us a question.
            </p>
-           <form method="post" action="#" id="regCust">
+           <form method="post" action="" id="regCust">
              <fieldset>
                  <legend>Your Details:</legend>
                <input type="text" name="firstName" placeholder="First Name" required tabindex="1" autofocus >
                <span class="error" id="firstName"></span>
              </fieldset>
+
              <fieldset>
                <input type="text" name="lastName" placeholder="Last Name" required tabindex="2">
                <span class="error" id="lastName"></span>
              </fieldset>
+
              <fieldset>
                <input type="email" name="email" placeholder="Email" required tabindex="3">
                <span class="error" id="email"></span>
             </fieldset>
+
             <fieldset>
                <input type="tel" name="telephone" placeholder="Telephone" required tabindex="4">
-               <span class="error" id="email"></span>
+               <span class="error" id="telephone"></span>
              </fieldset>
 
-             <fieldset class="cb">
+             <fieldset>
                  <legend>What do you want to ask?</legend>
-                 <textarea placeholder="Type your Message Here...." required tabindex="5"> </textarea>
-                 <span class="error" id="check"></span>
+                 <textarea id="textarea" placeholder="Type your Message Here...." tabindex="5" required></textarea>
+                 <span class="error" id="text"></span>
              </fieldset>
              <fieldset>
-                   <div class="submit">
-                     <button type="submit" class="btn" id="btn" tabindex="6">Click Here to Send!</button>
-                     <span id="success"></span>
-                   </div>
-              </fieldset>
+               <div class="submit">
+                 <button type="submit" class="btn" id="btn" tabindex="6">Click Here to Send!</button>
+                 <span id="success"></span>
+               </div>
+             </fieldset>
             </form>
           </section>
 

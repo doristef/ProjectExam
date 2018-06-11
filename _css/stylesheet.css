@@ -477,20 +477,27 @@ footer {
 
 /***** FORM STYLING ************************************************
   ******************************************************************/
-
+form { width: 95%; margin: 0;}
 legend { font-size: 1.2em; font-weight: 700; color: #F15A24; }
 
-fieldset { width: 85%; margin: 10px 0; border: 0; }
+fieldset {
+  width: 90%;
+  margin: 10px auto;
+  border: 0;
+  max-width: 400px;
+}
 
 
 /*-- 'text', 'email', 'tel' --*/
 input[type="text"], input[type="email"], input[type="tel"], textarea {
     background-color: #f9f9f9;
-    width: 80%;
+    width: 85%;
+    max-width: 400px;
     border: 1px solid #333;
     border-radius: 5px;
     padding: 10px;
     margin: 0;
+    padding: 10px 0;
     box-sizing: border-box;   /* Fix the fit */
 }
 
@@ -506,11 +513,11 @@ input[type="text"]:hover,
 input[type="email"]:hover,
 input[type="tel"]:hover,
 textarea:hover {
-transition:border-color 0.4s ease-in-out;
+  transition: border-color 0.4s ease-in-out;
 	border:1px solid #ff7100;
 }
 
-textarea { min-height: 200px; }
+textarea { min-height: 200px; overflow: auto; }
 
 /*-- submit --*/
 button[type="submit"] {
@@ -518,6 +525,8 @@ button[type="submit"] {
     color: #333;
     font-size: 1.4em;
     font-weight: 700;
+    width: 75%;
+    max-width: 300px;
     padding: 10px;
     border: 0;
     border-radius: 5px; /* Make it look round and nice */
@@ -532,7 +541,7 @@ button[type="submit"]:hover {
 form div.submit { text-align: center; margin: 15px; }
 
 form .error {
-  display: inline-block;
+  display: block;
   font-size: 1em;
   font-weight: 400;
   color: red;
@@ -543,8 +552,8 @@ div.submit span#success {
   font-size: 1.5em;
   font-weight: bold;
   padding: 25px;
-  height: 150px;
-  width: 550px;
+  height: 100px;
+  width: 75%;
   border: 0;
 }
 
@@ -597,7 +606,7 @@ div.submit span#success {
   #spacexHistory p { width: 100%; }
 
   div.cardContainer span b { display: block; }
-
+  fieldset { width: 100%; margin: 10px 0; border: 0; }
 /******* HAMBURGER NAV - show icon not links *************************/
   nav ul { flex-flow: column wrap; padding: 0; text-align: left; }
   /* Hide all */

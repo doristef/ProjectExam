@@ -1,4 +1,8 @@
-/** FORM VALIDATION v.1 by doristef.me **/
+/* jshint esversion: 6 */
+/*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+    Scripts by doristef.me // FORM VALIDATION v2.0
+-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*/
+
 
 /**  EMAIL VALIDATION
  * Let's validate the email address
@@ -33,7 +37,7 @@ function checkEmail(email, id) {
  */
 function checkName(name, id) {
   // Check the name and include the scandinavian characters
-  let nameRegex = /^[A-Za-zÀ-ÿ]{2,30}$/;
+  let nameRegex = /^[a-zA-Z\u00c0-\u017e]{2,30}$/;
   if ( !name ) {
     // console.log('Please enter first/last name!');
     document.getElementById(id).innerHTML =
@@ -42,6 +46,31 @@ function checkName(name, id) {
     // console.log('Please enter valid first/last name!');
     document.getElementById(id).innerHTML =
       'Please enter valid ' + id + '!';
+  } else {
+    // console.log('It works');
+    document.getElementById(id).innerHTML = '';
+    return true;
+  }
+}
+
+/**  TELEPHONE VALIDATION
+ * Check if telephone is valid
+ * @param {string} tel , Phone number (xxx( -.)xxx( -.)xxxx).
+ * @param {string} errorId , errorId in HTML.
+ * @return {boolean} true , returns true if it's valid.
+ *
+ */
+function checkTel(tel, id) {
+  // Works with: xx xxx xxx, xx-xxx-xxx, xx.xxx.xxx xxxxxxx
+  let telRegex = /^[0-9]{2}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{3}$/
+  if ( !tel ) {
+    // Error, telephone Empty
+    document.getElementById(id).innerHTML =
+      'Please enter ' + id + '!';
+  } else if ( !telRegex.test( tel ) ) {
+    // console.log('Please enter valid first/last name!');
+    document.getElementById(id).innerHTML =
+      'Please enter valid ' + id + '! <br> ( xxxxxxx / xx-xxx-xxx )';
   } else {
     // console.log('It works');
     document.getElementById(id).innerHTML = '';
@@ -58,14 +87,21 @@ btn.onclick = function() {
   let fName = document.getElementById('regCust').elements['firstName'].value;
   let lName = document.getElementById('regCust').elements['lastName'].value;
   let email = document.getElementById('regCust').elements['email'].value;
+  let tel = document.getElementById('regCust').elements['telephone'].value;
+  let text = document.getElementById('textarea').value;
+
+  console.log(text);
   // Call all check Functions.
   checkName(fName, 'firstName');
   checkName(lName, 'lastName');
   checkEmail(email, 'email');
+  checkTel(tel, 'telephone');
+  if( !text ){ document.getElementById('text').innerHTML = 'Please enter something!';
+  } else { document.getElementById('text').innerHTML = ''; }
 
   // IF all check Functions deliver true, success!
   if ( checkName(fName, 'firstName') && checkName(lName, 'lastName')
-  && checkEmail(email, 'email')) {
+  && checkEmail(email, 'email') && checkTel(tel, 'telephone') && text) {
       document.getElementById('success').innerHTML = 'Registration Success!';
   }
 };
