@@ -478,10 +478,34 @@ nav a[aria-haspopup="true"]::after {
 footer {
   background: #181C1F;
   width: 100%;
-  min-height: 100px;
+  min-height: 120px;
   text-align: center;
   border-top: 3px solid #ff7100;
 }
+
+footer span#copyright { display: block; color: #fff; margin: 15px 0;}
+
+footer div#api { margin: 0; padding: 0; width: 100%; }
+footer div#api h5,
+footer div#api a {
+  display: inline-block;
+  margin: 5px 0;
+  padding: 0 10px;
+  color: #ccc;
+}
+
+footer div#designer { margin: 0; padding: 0 0 10px 0; width: 100%; }
+footer div#designer h5,
+footer div#designer a {
+  display: inline-block;
+  margin: 5px 0;
+  padding: 0 10px;
+  color: #ccc;
+}
+
+footer div#api a:hover,
+footer div#designer a:hover { color: #ff7100; text-decoration: underline; }
+
 
 
 /***** FORM STYLING ************************************************
@@ -632,9 +656,19 @@ div.submit span#success {
   #spacexHistory p { width: 100%; }
 
   div.cardContainer span b { display: block; }
+
+  /******* FORM ******************************************************/
+
   fieldset { width: 100%; margin: 10px 0; border: 0; }
 
+  /******* FOOTER ****************************************************/
+  footer span#copyright{ margin-bottom: 40px; }
+  footer div#api h5,
+  footer div#api a,
+  footer div#designer h5,
+  footer div#designer a { display: block; }
 
+  footer div#designer h5 { margin-top: 40px; }
 /******* HAMBURGER NAV - show icon not links *************************/
 
   nav ul { flex-flow: column wrap; padding: 0; text-align: left; }
