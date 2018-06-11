@@ -129,16 +129,19 @@ main aside.sidebar { flex: 1; order: 1; }
 /***** HEADER **********************************************************
   **********************************************************************/
 
-  header {
+  header#apod {
     width: 75%;
-    background-size: cover;
     text-align: center;
+    background: linear-gradient(#ccc, #fff, #fff);
+
   }
 
   header span.apodImg img {
-     width: 100%;
-     max-height: 800px;
+     max-width: 100%;
+     max-height: 70VH;
      float:none;
+     border: 2px solid #333;
+     border-top: 0;
   }
   header span.apodTitle h2 {
     margin: 10px;
@@ -497,7 +500,7 @@ input[type="text"], input[type="email"], input[type="tel"], textarea {
     border-radius: 5px;
     padding: 10px;
     margin: 0;
-    padding: 10px 0;
+    padding: 10px 10px;
     box-sizing: border-box;   /* Fix the fit */
 }
 

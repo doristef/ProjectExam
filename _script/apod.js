@@ -44,8 +44,8 @@ function showApod (result) {
         apodTitle.style.display = 'none';
         apodTitle.innerHTML = '<h2>' + title + '</h2>';
         apodImg.innerHTML = '<a href="' + imageLink + '" alt="' + title + '"><img src="' + imageUrl + '" alt="' + title +'"></a>';
-        apodExp.innerHTML = imageExp;
-        if ( copyright ){ apodExp.innerHTML = + '<br><span> Copyright: ' + copyright + '.</span>'; }
+        apodExp.innerHTML = imageExp+ '<p><b><a href="' + imageLink + '" alt="' + title + '"> Click the image to see it BIGGER and in HD!</a></b></p>';
+        if ( copyright ){ apodExp.innerHTML = + '<p> Copyright: ' + copyright + '.</p>'; }
         apodExpMore.innerHTML += apodExpMoreMore;
 
         /**  SHOW / HIDE DIV, On Click */
