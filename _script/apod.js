@@ -49,7 +49,9 @@ function showApod (result) {
         } else {
         apodImg.innerHTML = '<a href="' + imageLink + '" alt="' + title + '"><img src="' + imageUrl + '" alt="' + title +'"></a>';
         }
-        apodExp.innerHTML = imageExp+ '<p><b><a href="' + imageLink + '" alt="' + title + '"> Click the image to see it BIGGER and in HD!</a></b></p>';
+        apodExp.innerHTML = imageExp;
+        if( media_type !== 'video' ) {'<p><b><a href="' + imageLink + '" alt="' + title + '"> Click the image to see it BIGGER and in HD!</a></b></p>'; }
+
         if ( copyright ){ apodExp.innerHTML = + '<p> Copyright: ' + copyright + '.</p>'; }
         apodExpMore.innerHTML += apodExpMoreMore;
 

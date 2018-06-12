@@ -145,10 +145,7 @@ header span.apodImg img {
 
 header span.apodImg iframe {
    max-width: 100%;
-   max-height: 70VH;
    float:none;
-   border: 2px solid #333;
-   border-top: 0;
 }
 
 header span.apodTitle h2 {
@@ -653,7 +650,6 @@ div.submit span#success {
 
   header#apod .apodImg img { border: 0; }
   #mapText { font-size: 1.2em; padding-bottom: 0; padding-top: 40px; }
-
 
   /******* SECTION 4 *************************************************/
 
