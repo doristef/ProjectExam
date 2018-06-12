@@ -21,7 +21,7 @@ let displayHistory = ( function displayHistory () {
     .then((res) => {
       // Remove load message
       removeAddText('', sxULaunch);
-      
+
       for(key in res) {
                       let success = (res[key].launch_success === true ) ? 'Yes' : 'No';
                       let patch = (res[key].links.mission_patch_small) ? '<img src="' + res[key].links.mission_patch_small + '" alt="' + res[key].mission_name + '">' : '';
@@ -35,7 +35,7 @@ let displayHistory = ( function displayHistory () {
                       card += '<span><b>Launch Site:</b> ' + res[key].launch_site.site_name_long + '.</span>';
                          card += '<span><b>Links:</b><ul>';
                          for( key1 in res[key].links ) {
-                            if ( res[key].links[key1]) {
+                            if ( res[key].links[key1] ) {
                               linkName = replaceWords('_', ' ', key1);
                               card +=  '<li><a href="' + res[key].links[key1] + '" title=" ' + res[key].mission_name + '">' + capitalize(linkName) + '</a></li>';
                             }

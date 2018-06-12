@@ -32,6 +32,7 @@ function showApod (result) {
         let imageUrl = result.url;
         let imageExp = result.explanation;
         let copyright = result.copyright;
+        let media_type = result.media_type;
         /* Shorten the explanation
         let imageExpShort = imageExp.slice(0,100) + '  ...  ' */
 
@@ -43,7 +44,11 @@ function showApod (result) {
         apodExp.style.display = 'none';
         apodTitle.style.display = 'none';
         apodTitle.innerHTML = '<h2>' + title + '</h2>';
+        if( media_type === 'video' ) {
+        apodImg.innerHTML = '<iframe width="420" height="315" src="' + imageUrl + '"></iframe>';
+        } else {
         apodImg.innerHTML = '<a href="' + imageLink + '" alt="' + title + '"><img src="' + imageUrl + '" alt="' + title +'"></a>';
+        }
         apodExp.innerHTML = imageExp+ '<p><b><a href="' + imageLink + '" alt="' + title + '"> Click the image to see it BIGGER and in HD!</a></b></p>';
         if ( copyright ){ apodExp.innerHTML = + '<p> Copyright: ' + copyright + '.</p>'; }
         apodExpMore.innerHTML += apodExpMoreMore;

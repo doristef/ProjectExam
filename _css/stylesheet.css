@@ -137,6 +137,14 @@ header#apod {
 
 header span.apodImg img {
    max-width: 100%;
+   max-height: 600px;
+   float:none;
+   border: 2px solid #333;
+   border-top: 0;
+}
+
+header span.apodImg iframe {
+   max-width: 100%;
    max-height: 70VH;
    float:none;
    border: 2px solid #333;
