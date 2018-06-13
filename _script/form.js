@@ -96,12 +96,12 @@ btn.onclick = function() {
   checkName(lName, 'lastName');
   checkEmail(email, 'email');
   checkTel(tel, 'telephone');
-  if( !text ){ document.getElementById('text').innerHTML = 'Please enter something!';
+  if( text.length < 10 ){ document.getElementById('text').innerHTML = 'Please enter something!';
   } else { document.getElementById('text').innerHTML = ''; }
 
   // IF all check Functions deliver true, success!
   if ( checkName(fName, 'firstName') && checkName(lName, 'lastName')
-  && checkEmail(email, 'email') && checkTel(tel, 'telephone') && text) {
+  && checkEmail(email, 'email') && checkTel(tel, 'telephone') && (text.length > 10)) {
       document.getElementById('success').innerHTML = 'Registration Success!';
   }
 };
