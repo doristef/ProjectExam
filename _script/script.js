@@ -43,7 +43,12 @@ let changeBg = ( function() {
                 '_img/richard-gatley-533872-unsplash' + res + '.jpg'];
 
     var randomNumber = Math.floor(Math.random() * images.length);
-    var randomNumber2 = (randomNumber === images.length) ? randomNumber-1 : randomNumber+1;
+    var randomNumber2 = randomNumber;
+    if ( randomNumber < images.length -1 ){
+      randomNumber2++;
+    }else{
+      randomNumber2-- 
+    }
 
     var css = 'main section.third { background: #fff url("' + images[randomNumber] + '") no-repeat center center fixed; background-size: cover; }';
     css += 'main aside.sidebar div#sideImage { background: #fff url("' + images[randomNumber2] + '") no-repeat center center; background-size: cover; }';

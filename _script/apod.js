@@ -44,15 +44,23 @@ function showApod (result) {
         apodExp.style.display = 'none';
         apodTitle.style.display = 'none';
         apodTitle.innerHTML = '<h2>' + title + '</h2>';
-        if( media_type === 'video' ) {
-        apodImg.innerHTML = '<iframe width="420" height="315" src="' + imageUrl + '"></iframe>';
-        } else {
-        apodImg.innerHTML = '<a href="' + imageLink + '" alt="' + title + '"><img src="' + imageUrl + '" alt="' + title +'"></a>';
-        }
-        apodExp.innerHTML = imageExp;
-        if( media_type !== 'video' ) {'<p><b><a href="' + imageLink + '" alt="' + title + '"> Click the image to see it BIGGER and in HD!</a></b></p>'; }
 
-        if ( copyright ){ apodExp.innerHTML = + '<p> Copyright: ' + copyright + '.</p>'; }
+        if( media_type === 'video' ) {
+          apodImg.innerHTML = '<iframe width="420" height="315" src="' + imageUrl + '"></iframe>';
+        } else {
+          apodImg.innerHTML = '<a href="' + imageLink + '" alt="' + title + '"><img src="' + imageUrl + '" alt="' + title +'"></a>';
+        }
+
+        apodExp.innerHTML += imageExp;
+
+        if( media_type === 'image' ) {
+          apodExp.innerHTML += '<p><b><a href="' + imageLink + '" alt="' + title + '"> Click the image to see it BIGGER and in HD!</a></b></p>';
+        }
+
+        if ( copyright ){
+          apodExp.innerHTML += '<p> Copyright: ' + copyright + '.</p>';
+        }
+
         apodExpMore.innerHTML += apodExpMoreMore;
 
         /**  SHOW / HIDE DIV, On Click */
