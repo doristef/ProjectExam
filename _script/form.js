@@ -96,7 +96,7 @@ btn.onclick = function() {
   checkName(lName, 'lastName');
   checkEmail(email, 'email');
   checkTel(tel, 'telephone');
-  if( text.length < 10 ){ document.getElementById('text').innerHTML = 'Please enter something!';
+  if( text.length < 10 ){ document.getElementById('text').innerHTML = 'Please enter something! (min.10 characters)';
   } else { document.getElementById('text').innerHTML = ''; }
 
   // IF all check Functions deliver true, success!
