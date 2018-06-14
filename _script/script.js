@@ -12,6 +12,7 @@
  */
 function showHide() {
   let nav = document.getElementById("navigation");
+  console.log('click');
   if ( nav.className === "dropdown" ) {
       nav.className += " responsive";
   } else {
@@ -21,7 +22,9 @@ function showHide() {
 
 /* On-click UL/LI - with Id */
 let clickElement = document.getElementById("hamburgerNav");
+let clickElement2 = document.getElementById("idLink");
 clickElement.addEventListener("click", showHide, false);
+clickElement2.addEventListener("click", showHide, false);
 
 /**  Random Background Image
  *
@@ -47,7 +50,7 @@ let changeBg = ( function() {
     if ( randomNumber < images.length -1 ){
       randomNumber2++;
     }else{
-      randomNumber2-- 
+      randomNumber2--
     }
 
     var css = 'main section.third { background: #fff url("' + images[randomNumber] + '") no-repeat center center fixed; background-size: cover; }';
