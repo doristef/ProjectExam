@@ -12,7 +12,7 @@
  */
 function showHide() {
   let nav = document.getElementById("navigation");
-  console.log('click');
+
   if ( nav.className === "dropdown" ) {
       nav.className += " responsive";
   } else {
@@ -22,9 +22,12 @@ function showHide() {
 
 /* On-click UL/LI - with Id */
 let clickElement = document.getElementById("hamburgerNav");
-let clickElement2 = document.getElementById("idLink");
 clickElement.addEventListener("click", showHide, false);
-clickElement2.addEventListener("click", showHide, false);
+
+let elements = document.getElementsByClassName('idLink');
+for ( let i = 0; i < elements.length; i++ ) {
+  elements[i].addEventListener("click", showHide, false);
+}
 
 /**  Random Background Image
  *
