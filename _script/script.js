@@ -33,7 +33,7 @@ for ( let i = 0; i < elements.length; i++ ) {
  *
  * @type {string} width , Width of User Screen
  * @type {string} res, Find relevant image size for screen
- * @type {object} image, Array of Images to be used.
+ * @type {object} images, Array of Images to be used.
  * Images from Unsplash.com
  *
  */

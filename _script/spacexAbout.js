@@ -3,21 +3,17 @@
     Scripts by doristef.me
 -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*/
 
-// API for Location of ISS, Astronauts/People in Space.
+// API for about SpaceX
 const spacexAbout = 'https://api.spacexdata.com/v2/info'
 
-// Elements used for SpaceX Info.
+// Elements used for SpaceX About.
 let sxAbout = document.getElementById('spacexAbout');
 
-/* ADD Load Message on Fun Fact / Map */
+/* ADD Load Message on About */
 window.onload = removeAddText('<h2>Fetching Data!</h2>', sxAbout);
 
 
- /**  SpaceX, About
-  *
-  * @type {-} -, -, -.
-  *
-  */
+ /**  SpaceX, About -  */
  let displayAbout = ( function displayAbout () {
 
    fetch(spacexAbout)
@@ -45,6 +41,7 @@ window.onload = removeAddText('<h2>Fetching Data!</h2>', sxAbout);
             let hqState = res.headquarters.state;
             let summary = res.summary;
 
+            // Push all data to HTML
             sxAbout.innerHTML += '<strong>' + name + '</strong> was founded in <strong>' + founded + '</strong> by the incredible <strong>' + founder + '</strong>.<br>';
             sxAbout.innerHTML += '<strong>' + name + '</strong> has now <strong>' + employees + '</strong> employees, <strong>' + vehicles + '</strong> Vehicles, <strong>' + launch_sites + '</strong> Launch sites and <strong>' + test_sites + '</strong> Test site.';
             sxAbout.innerHTML += '<h4> Management </h4>';
@@ -53,13 +50,8 @@ window.onload = removeAddText('<h2>Fetching Data!</h2>', sxAbout);
             sxAbout.innerHTML += '<p><strong>' + name + '</strong> is located at ' + hqAddr + ', ' + hqCity + ', ' + hqState + ', United States of America. </p>';
             sxAbout.innerHTML += '<h4> Summary </h4>';
             sxAbout.innerHTML += '<p>' + summary + '</p>';
+            // Use formatMoney function
             sxAbout.innerHTML += '<p><strong>' + name + '</strong> is valued at ' + formatMoney(valuation, 'USD') + '</p>';
-          /*  <div id="card">
-              <div class="container">
-                <h4><b>Jane Doe</b></h4>
-                <p>Interior Designer</p>
-              </div>
-            </div> */
       })
    // If it fails, show the error in the console.
    .catch(err => console.log(err));

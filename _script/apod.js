@@ -19,11 +19,8 @@ let apodTitle = document.getElementById('apod').getElementsByClassName('apodTitl
 /* ADD Load Message on Fun Fact / Map */
 window.onload = removeAddText('<h2>Astronomy Picture of the Day, Coming Up!</h2>', apodLoad);
 
-/**  SHOW APOD, Astronomy Picture of the Day
-  *
-  * @param {object} result , Object Array to post.
-  *
-  */
+
+/**  SHOW APOD, Astronomy Picture of the Day */
 function showApod (result) {
 
         let imageDate = result.date;

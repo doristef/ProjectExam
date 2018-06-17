@@ -4,7 +4,7 @@
 -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*/
 
 // API for Rockets from SpaceX
-const spacexCaps = 'https://api.spacexdata.com/v2/rockets'
+const spacexRock = 'https://api.spacexdata.com/v2/rockets'
 
 // Elements used for SpaceX Info.
 let sxRock = document.getElementById('spacexRock');
@@ -14,20 +14,16 @@ let active = '';
 window.onload = removeAddText('<h2>Fetching Data!</h2>', sxRock);
 
 
- /**  SpaceX Capsules from SpaceX API
-  *
-  * @type {string} number, API, Number of People in Space.
-  * @type {object} people, API, Names/Spacecrafts for People in Space.
-  *
-  */
+ /**  SpaceX Rockets from SpaceX API */
  let displayCapsules = ( function displayCapsules () {
 
-   fetch(spacexCaps)
+   fetch(spacexRock)
      .then(result => result.json()) // Transform into json.
      .then((res) => {
-       
+
        // Remove load message
        removeAddText('', sxRock);
+
         for(key in res) {
           if ( res.hasOwnProperty(key) ) {
            active = ( res[key].active === true ) ? 'Active' : 'Inactive';
@@ -45,8 +41,8 @@ window.onload = removeAddText('<h2>Fetching Data!</h2>', sxRock);
         }
       }
       sxRock.innerHTML += card;
-
     } )
+
    // If it fails, show the error in the console.
    .catch(err => console.log(err));
  })();

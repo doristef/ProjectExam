@@ -3,10 +3,10 @@
     Scripts by doristef.me
 -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*/
 
-// API for Location of ISS, Astronauts/People in Space.
-const spacexHistory = 'https://api.spacexdata.com/v2/info/history?sort=title'
+// API for the History of SpaceX
+const spacexHistory = 'https://api.spacexdata.com/v2/info/history'
 let howMany = 3; // How many articles to show
-let article = []; // Store Articles
+let article = []; // Store Articles, to sort them
 
 // Elements used for SpaceX Info.
 let sxHis = document.getElementById('spacexHistory');
@@ -15,12 +15,7 @@ let sxHis = document.getElementById('spacexHistory');
 removeAddText('<h2>Fetching Data!</h2>', sxHis);
 
 
- /**  SpaceX History from SpaceX API
-  *
-  * @type {string} number, API, Number of People in Space.
-  * @type {object} people, API, Names/Spacecrafts for People in Space.
-  *
-  */
+ /**  SpaceX History from SpaceX API */
  let displayHistory = ( function displayHistory () {
 
 

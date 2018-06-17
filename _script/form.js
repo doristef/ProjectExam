@@ -1,6 +1,6 @@
 /* jshint esversion: 6 */
 /*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
-    Scripts by doristef.me // FORM VALIDATION v2.0
+    FORM VALIDATION v2.0 by doristef.me
 -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*/
 
 
@@ -90,7 +90,6 @@ btn.onclick = function() {
   let tel = document.getElementById('regCust').elements['telephone'].value;
   let text = document.getElementById('textarea').value;
 
-  console.log(text);
   // Call all check Functions.
   checkName(fName, 'firstName');
   checkName(lName, 'lastName');
