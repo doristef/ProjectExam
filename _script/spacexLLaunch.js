@@ -19,6 +19,7 @@ let displayHistory = ( function displayHistory () {
   fetch(spacexLLaunch)
     .then(result => result.json()) // Transform into json.
     .then((res) => {
+
       // Remove load message
       removeAddText('', sxLLaunch);
 
@@ -29,7 +30,8 @@ let displayHistory = ( function displayHistory () {
                       card += '<h2>' + res.mission_name + ' - fn:' + res.flight_number + '</h2>';
                       card += '<span><b>Rocket:</b> ' + res.rocket.rocket_name + ', <b>Rocket Type:</b> ' + res.rocket.rocket_type + ' </span>';
                       d = new Date(res.launch_date_local);
-                      card += '<span><b>Launch Date:</b> ' + d.toLocaleString() + ', <b> Launch Success:</b> ' + success + '</span>';
+                      card += '<span><b>Launch Date:</b> ' + d.toLocaleString() + '</span>';
+                      card += '<span><b> Launch Success:</b> ' + success + '</span>';
                       card += '<span><b>Launch Site:</b> ' + res.launch_site.site_name_long + '.</span>';
                       card += '<span><b>Telemetry:</b> <a href="' + res.telemetry.flight_club + '" title="Telemetry">Click Here!</a></span>';
                       card += '<span><b>Details:</b> <p> ' + res.details + '</p></span>';
