@@ -585,7 +585,7 @@ form .error {
   color: red;
 }
 /*-- success message --*/
-div.submit span#success {
+span#success {
   display: block;
   color: green;
   font-size: 1.5em;
